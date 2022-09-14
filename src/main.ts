@@ -1,3 +1,5 @@
+import Game from './game/Game';
+
 const appId = 'app';
 const app = document.getElementById(appId);
 
@@ -8,4 +10,5 @@ if (!app) {
 const canvas = document.createElement('canvas');
 app.appendChild(canvas);
 
-export {};
+const game = new Game(canvas);
+game.start();
