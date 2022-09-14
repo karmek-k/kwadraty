@@ -8,11 +8,6 @@ export default class Game {
     renderer.testRendering();
   }
 
-  setSize(width: number, height: number) {
-    this.canvas.width = width;
-    this.canvas.height = height;
-  }
-
   private assertCtx() {
     const ctx = this.canvas.getContext('2d');
 

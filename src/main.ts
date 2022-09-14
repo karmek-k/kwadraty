@@ -8,10 +8,15 @@ if (!app) {
 }
 
 // Make canvas
+const width = 800;
+const height = 600;
+
 const canvas = document.createElement('canvas');
+canvas.width = width;
+canvas.height = height;
+
 app.appendChild(canvas);
 
 // Create and start the game
 const game = new Game(canvas);
-game.setSize(800, 600);
 game.start();
