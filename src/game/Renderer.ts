@@ -1,12 +1,22 @@
-export default class Renderer {
-  constructor(private ctx: CanvasRenderingContext2D) {}
+import Drawable from './drawables/Drawable';
 
-  /**
-   * From https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#rectangular_shape_example
-   */
-  testRendering(): void {
-    this.ctx.fillRect(25, 25, 100, 100);
-    this.ctx.clearRect(45, 45, 60, 60);
-    this.ctx.strokeRect(50, 50, 50, 50);
+export default class Renderer {
+  private drawables: Drawable[];
+
+  constructor(private ctx: CanvasRenderingContext2D) {
+    this.drawables = [];
+  }
+
+  render(): void {
+    // weird `this` behavior
+    this.drawables.forEach(item => this.draw(item));
+  }
+
+  setDrawables(drawables: Drawable[]): void {
+    this.drawables = drawables;
+  }
+
+  private draw(drawable: Drawable): void {
+    drawable.draw(this.ctx);
   }
 }

@@ -1,3 +1,4 @@
+import TestObject from './drawables/TestObject';
 import Renderer from './Renderer';
 
 export default class Game {
@@ -5,7 +6,10 @@ export default class Game {
 
   start(): void {
     const renderer = new Renderer(this.assertCtx());
-    renderer.testRendering();
+
+    renderer.setDrawables([new TestObject()]);
+
+    renderer.render();
   }
 
   private assertCtx(): CanvasRenderingContext2D {
