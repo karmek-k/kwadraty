@@ -1,5 +1,5 @@
 import Brick from './drawables/Brick';
-import BrickColor from './drawables/bricks/BrickColor';
+import BrickColor from './drawables/BrickColor';
 import Renderer from './Renderer';
 
 export default class Game {

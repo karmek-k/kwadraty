@@ -1,4 +1,4 @@
-import BrickColor from './bricks/BrickColor';
+import BrickColor from './BrickColor';
 import Drawable from './Drawable';
 
 export default class Brick implements Drawable {
