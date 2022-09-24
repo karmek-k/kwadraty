@@ -34,4 +34,8 @@ export default class Brick implements Drawable {
 
     this.side = side;
   }
+
+  getSide(): number {
+    return this.side;
+  }
 }
